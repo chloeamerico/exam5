@@ -134,7 +134,7 @@ unsigned int str_to_uint(std::string str)
 	return (std::stoul(str));
 }
 
-//srcs est le nb de bits a decaler
+//srcs est le nb de bits a ajouter
 bigint bigint::operator<<(const bigint &srcs)const
 {
 	unsigned int n = str_to_uint(srcs.str);
@@ -150,7 +150,11 @@ bigint bigint::operator<<(unsigned int n)const
 	return copy;
 }
 
-// bigint operator>>(const bigint &src)const;
+//on ajoute des 0
+bigint bigint::operator>>(const bigint &src)const
+{
+
+}
 // bigint operator>>(unsigned int n)const;
 // bigint &operator>>=(unsigned int n);
 // bigint &operator>>=(const bigint &src);
