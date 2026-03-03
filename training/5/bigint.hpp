@@ -6,7 +6,7 @@
 /*   By: camerico <camerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 15:17:12 by camerico          #+#    #+#             */
-/*   Updated: 2026/02/19 15:27:15 by camerico         ###   ########.fr       */
+/*   Updated: 2026/02/26 13:33:59 by camerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class bigint
 
 		//getter
 		std::string get_str() const;
-		
+	
 		//addition (+, +=, ++)
 		bigint operator+(const bigint& srcs) const;
 		bigint &operator+=(const bigint& srcs);
