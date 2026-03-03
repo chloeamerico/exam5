@@ -6,7 +6,7 @@
 /*   By: camerico <camerico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 16:16:58 by camerico          #+#    #+#             */
-/*   Updated: 2026/03/03 16:57:43 by camerico         ###   ########.fr       */
+/*   Updated: 2026/03/03 18:27:33 by camerico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,12 @@ searchable_tree_bag& searchable_tree_bag::operator=(const searchable_tree_bag& c
 
 bool searchable_tree_bag::search(node* node, const int value) const
 {
-    if(node == nullptr)
-        return(false);
+    if (node == nullptr)
+        return false;
     if(node->value == value)
-        return(true);
-    else if(value < node->value)
-    {
+        return true;
+    else if (value < node->value)
         return (search(node->l, value));
-    }
     else
         return (search(node->r, value));
 }
@@ -45,6 +43,4 @@ bool searchable_tree_bag::has(int value) const
     return (search(this->tree, value));
 }
 
-~searchable_tree_bag();
-
-
+searchable_tree_bag::~searchable_tree_bag() {}
